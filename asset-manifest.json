@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/finger-count-dashboard/static/css/main.e6c13ad2.css",
+    "main.js": "/finger-count-dashboard/static/js/main.3286301c.js",
+    "static/js/453.e440f880.chunk.js": "/finger-count-dashboard/static/js/453.e440f880.chunk.js",
+    "index.html": "/finger-count-dashboard/index.html",
+    "main.e6c13ad2.css.map": "/finger-count-dashboard/static/css/main.e6c13ad2.css.map",
+    "main.3286301c.js.map": "/finger-count-dashboard/static/js/main.3286301c.js.map",
+    "453.e440f880.chunk.js.map": "/finger-count-dashboard/static/js/453.e440f880.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.3286301c.js"
+  ]
+}
