@@ -2,6 +2,7 @@
   "name": "finger-count-dashboard",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://khalil297.github.io/finger-count-dashboard",
   "dependencies": {
     "@tensorflow-models/handpose": "^0.1.0",
     "@tensorflow/tfjs": "^4.20.0",
@@ -22,6 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
