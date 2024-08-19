@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import HandTracker from './HandTracker';
+import FingerChart from './FingerChart';
 
-function App() {
+const App: React.FC = () => {
+  const [fingerCounts, setFingerCounts] = useState<number[]>([]);
+
+  const handleFingerCountChange = (count: number) => {
+    setFingerCounts(prevCounts => [
+      ...prevCounts.slice(-9), // Keep only the last 10 data points
+      count
+    ]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: 'center', padding: '20px' }}>
+      <h1>Hand Number Detection</h1>
+      <HandTracker onFingerCountChange={handleFingerCountChange} />
+      <FingerChart data={fingerCounts} />
     </div>
   );
-}
+};
 
 export default App;
